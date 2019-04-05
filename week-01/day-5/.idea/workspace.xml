@@ -2,15 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c7f2793c-7700-4467-8642-1858ee6a18e1" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../day-4/WorkshopDay4/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/AverageOfInput.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/DrawChessTable.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/DrawDiamond.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/DrawPyramid.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/DrawTriangle.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/GuessTheNumber.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ParametricAverage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../day-4/WorkshopDay4/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../day-4/WorkshopDay4/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ParametricAverage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ParametricAverage.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -55,8 +47,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/DrawDiamond.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
-              <caret line="8" column="32" lean-forward="true" selection-start-line="8" selection-start-column="32" selection-end-line="8" selection-end-column="32" />
+            <state relative-caret-position="51">
+              <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="3" />
             </state>
           </provider>
         </entry>
@@ -64,8 +56,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/ParametricAverage.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="332">
-              <caret line="20" lean-forward="true" selection-start-line="20" selection-end-line="20" />
+            <state relative-caret-position="442">
+              <caret line="26" column="3" lean-forward="true" selection-start-line="26" selection-start-column="3" selection-end-line="26" selection-end-column="3" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -126,7 +118,7 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="1">
+  <component name="ProjectFrameBounds">
     <option name="x" value="-8" />
     <option name="width" value="1109" />
     <option name="height" value="1038" />
@@ -158,6 +150,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
@@ -175,7 +168,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.DrawDiamond">
+  <component name="RunManager" selected="Application.ParametricAverage">
     <configuration name="DrawDiamond" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="DrawDiamond" />
       <module name="WorkshopDay5" />
@@ -213,8 +206,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.DrawDiamond" />
         <item itemvalue="Application.ParametricAverage" />
+        <item itemvalue="Application.DrawDiamond" />
         <item itemvalue="Application.GuessTheNumber" />
         <item itemvalue="Application.DrawPyramid" />
         <item itemvalue="Application.DrawTriangle" />
@@ -231,16 +224,15 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1554449286532</updated>
-      <workItem from="1554449290198" duration="21681000" />
+      <workItem from="1554449290198" duration="25946000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="21681000" />
+    <option name="totallyTimeSpent" value="25946000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-6" y="0" width="887" height="830" extended-state="0" />
-    <editor active="true" />
     <layout>
       <window_info id="Image Layers" />
       <window_info id="Designer" />
@@ -257,7 +249,7 @@
       <window_info anchor="bottom" id="Event Log" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.33148405" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.33148405" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39917696" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -277,13 +269,6 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/DrawTriangle.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="25" lean-forward="true" selection-start-line="4" selection-start-column="25" selection-end-line="4" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/GuessTheNumber.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="340">
@@ -312,17 +297,24 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/DrawTriangle.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="25" lean-forward="true" selection-start-line="4" selection-start-column="25" selection-end-line="4" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/DrawDiamond.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="32" lean-forward="true" selection-start-line="8" selection-start-column="32" selection-end-line="8" selection-end-column="32" />
+        <state relative-caret-position="51">
+          <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="3" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/ParametricAverage.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="332">
-          <caret line="20" lean-forward="true" selection-start-line="20" selection-end-line="20" />
+        <state relative-caret-position="442">
+          <caret line="26" column="3" lean-forward="true" selection-start-line="26" selection-start-column="3" selection-end-line="26" selection-end-column="3" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

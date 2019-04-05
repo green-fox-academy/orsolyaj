@@ -7,14 +7,22 @@ public class ParametricAverage {
     System.out.println("Please enter a number of coming numbers: ");
     int num = Scanner.nextInt();
 
-    int inp[] = new int[num];
+    int array[] = new int[num];
 
     {
       System.out.println("Enter a number: ");
 
       for (int i = 0; i < num; ++i) {
-        inp[i] = Scanner.nextInt();
+        array[i] = Scanner.nextInt();
       }
+
+      int sum = 0;
+
+      for (int a = 0; a < array.length; a++) {
+        sum += a;
+      }
+      System.out.println( "SSum of numbers issum);
+
     }
   }
 }
