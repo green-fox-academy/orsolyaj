@@ -1,52 +1,29 @@
 public class DrawDiamond {
   public static void main(String[] args) {
-    int a = 7;
+    int a = 8;
 
-    if (a % 2 != 0) {
-
-      for (int row = 0; row <= a / 2; ++row) {
-        for (int sp = a / 2; sp >= row; --sp) {
-          System.out.print(" ");
-        }
-        for (int st = 0; st <= (row * 2); ++st) {
-          System.out.print("*");
-        }
-        System.out.println();
+    for (int row = 0; row <= a / 2; ++row) {
+      for (int sp = a / 2; sp >= row; --sp) {
+        System.out.print(" ");
       }
-
-      for ( int row = a / 2; row > 0; --row) {
-        for  (int sp = 2; sp < row; ++sp) {
-          System.out.print(" ");
-        }
-        for (int st = a - 2 ; st > (row * 2); st--){
-          System.out.print("*");
-        }
+      for (int st = 0; st <= (row * 2); ++st) {
+        System.out.print("*");
       }
+      System.out.println();
+    }
 
-      } else {
-
-
-        for (int row = 0; row < a / 2; ++row) {
-          for (int sp = a / 2; sp >= row; --sp) {
-            System.out.print(" ");
-          }
-          for (int st = 0; st <= (row * 2); ++st) {
-            System.out.print("*");
-          }
-          System.out.println();
-        }
-
-        for (int row = 0; row < a / 2 ; ++row) {
-          for (int sp = 0; sp <= row; ++sp) {
-            System.out.print(" ");
-          }
-          for (int st = (a); st > (row * 2); --st) {
-            System.out.print("*");
-          }
-          System.out.println();
-        }
+    for (int row = a / 2; row > 0; --row) {
+      for (int sp = a / 2 + 1; sp >= row; --sp) {
+        System.out.print(" ");
       }
+      for (int st = 0; st < (row * 2) - 1; st++) {
+        System.out.print("*");
+      }
+      System.out.println();
+    }
 
-
+    
   }
 }
+
+
