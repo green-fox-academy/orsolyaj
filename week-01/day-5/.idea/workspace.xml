@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c7f2793c-7700-4467-8642-1858ee6a18e1" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/DrawDiagonal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/DrawDiagonal.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/DrawChessTable.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/DrawChessTable.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -53,11 +52,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/DrawDiagonal.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="128">
-              <caret line="8" column="58" selection-start-line="8" selection-start-column="58" selection-end-line="8" selection-end-column="58" />
+            <state relative-caret-position="34">
+              <caret line="2" column="14" selection-start-line="2" selection-start-column="14" selection-end-line="2" selection-end-column="14" />
             </state>
           </provider>
         </entry>
@@ -77,17 +76,17 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/GuessTheNumber.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="340">
-              <caret line="20" selection-start-line="20" selection-end-line="20" />
+            <state relative-caret-position="34">
+              <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/DrawChessTable.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="51">
-              <caret line="3" selection-start-line="3" selection-end-line="3" />
+            <state relative-caret-position="187">
+              <caret line="11" column="9" selection-start-line="11" selection-start-column="9" selection-end-line="11" selection-end-column="9" />
             </state>
           </provider>
         </entry>
@@ -113,11 +112,11 @@
         <option value="$PROJECT_DIR$/src/DrawTriangle.java" />
         <option value="$PROJECT_DIR$/src/DrawPyramid.java" />
         <option value="$PROJECT_DIR$/src/GuessTheNumber.java" />
-        <option value="$PROJECT_DIR$/src/DrawChessTable.java" />
         <option value="$PROJECT_DIR$/src/Diamond.java" />
         <option value="$PROJECT_DIR$/src/DrawDiamond.java" />
         <option value="$PROJECT_DIR$/src/ParametricAverage.java" />
         <option value="$PROJECT_DIR$/src/DrawDiagonal.java" />
+        <option value="$PROJECT_DIR$/src/DrawChessTable.java" />
       </list>
     </option>
   </component>
@@ -171,9 +170,9 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.DrawDiagonal">
-    <configuration name="Diamond" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Diamond" />
+  <component name="RunManager" selected="Application.DrawChessTable">
+    <configuration name="DrawChessTable" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="DrawChessTable" />
       <module name="WorkshopDay5" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -209,11 +208,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.DrawChessTable" />
+        <item itemvalue="Application.GuessTheNumber" />
         <item itemvalue="Application.DrawDiagonal" />
         <item itemvalue="Application.ParametricAverage" />
         <item itemvalue="Application.DrawDiamond" />
-        <item itemvalue="Application.Diamond" />
-        <item itemvalue="Application.GuessTheNumber" />
       </list>
     </recent_temporary>
   </component>
@@ -228,12 +227,12 @@
       <option name="presentableId" value="Default" />
       <updated>1554449286532</updated>
       <workItem from="1554449290198" duration="25946000" />
-      <workItem from="1554665854363" duration="4732000" />
+      <workItem from="1554665854363" duration="6875000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="30678000" />
+    <option name="totallyTimeSpent" value="32821000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-6" y="0" width="781" height="830" extended-state="0" />
@@ -295,20 +294,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/GuessTheNumber.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="20" selection-start-line="20" selection-end-line="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/DrawChessTable.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" selection-start-line="3" selection-end-line="3" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Diamond.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
@@ -333,10 +318,24 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/GuessTheNumber.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/DrawDiagonal.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="128">
-          <caret line="8" column="58" selection-start-line="8" selection-start-column="58" selection-end-line="8" selection-end-column="58" />
+        <state relative-caret-position="34">
+          <caret line="2" column="14" selection-start-line="2" selection-start-column="14" selection-end-line="2" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/DrawChessTable.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" column="9" selection-start-line="11" selection-start-column="9" selection-end-line="11" selection-end-column="9" />
         </state>
       </provider>
     </entry>
