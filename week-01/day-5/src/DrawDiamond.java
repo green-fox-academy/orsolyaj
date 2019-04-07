@@ -22,7 +22,7 @@ public class DrawDiamond {
       System.out.println();
     }
 
-    
+
   }
 }
 

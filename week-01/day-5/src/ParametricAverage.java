@@ -21,8 +21,10 @@ public class ParametricAverage {
       for (int a = 0; a < array.length; a++) {
         sum += a;
       }
-      System.out.println( "SSum of numbers issum);
+      System.out.println("Sum of numbers is " + sum);
 
+      int avg = sum / num;
+      System.out.println("Average of numbers is " + avg);
     }
   }
 }
