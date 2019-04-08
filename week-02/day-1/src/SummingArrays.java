@@ -1,6 +1,6 @@
-public class Summing {
+public class SummingArrays {
   public static void main(String[] args) {
-    int[] array = new int[5];
+    int[] array = {1,2,3};
     System.out.println(sum(array));
   }
 
@@ -8,7 +8,7 @@ public class Summing {
     int sum = 0;
     for (int i = 0; i < ar.length; ++i) {
       sum += ar[i];
-      // for (sum : ar
+
     }
     return sum;
   }
