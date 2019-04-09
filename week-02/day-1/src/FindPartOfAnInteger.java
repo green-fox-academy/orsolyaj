@@ -5,16 +5,17 @@ public class FindPartOfAnInteger {
     subInt(arr, num);
   }
   public static int[] subInt(int[] ar,int num) {
-    int[] newa = [ar.length]
-
+    int[] newa = new int[ar.length];
     for (int i = 0; 0 < ar.length; ++i) {
-      if (ar[i] % 10 == num || ar[i] / 10 == num) {
-        
-        System.out.print(i + ", ");
+      if (ar[i] % 10 == num || ar[i] / 10 == num || ar[i] == num) {
+        for (int j = 0; j < i; j++) {
+          newa[j] = ar[i];
+          System.out.print(ar[i]);
+        }
       } else {
-        System.out.print(" ");
+        System.out.print("[  ]");
       }
     }
-    return  ;
+    return newa;
 }
 }
