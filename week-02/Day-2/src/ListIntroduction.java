@@ -20,10 +20,20 @@ public class ListIntroduction {
     while (listIterator.hasNext()) {
       System.out.println(listIterator.next());
     }
+    list.remove(2);
+    System.out.println(list);
 
-   /* ListIterator listIteratorb = list.listIteratorb(list.size());
-    while (listIteratorb.hasPrevious()) {
-      System.out.println(listIteratorb.previous());
-    } */
+    for (String name : list) {
+      System.out.println(name);
+    }
+
+    for (int i = list.size() - 1; i >= 0; --i) {
+      System.out.println(list.get(i));
+    }
+
+    list.clear();
+    System.out.println(list);
+
+
   }
 }
