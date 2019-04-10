@@ -10,7 +10,7 @@ public class ThelephoneBook {
     pb.put("Brooke", "307-687-2982");
 
     System.out.println("Johns no. is: " + pb.get("John"));
-    
+
     System.out.println("Johns no. is: " + pb.getKey("307-687-2982"));
 
   }
