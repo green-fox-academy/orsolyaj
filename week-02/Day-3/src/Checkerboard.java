@@ -12,24 +12,21 @@ public class Checkerboard {
     int height = 0;
     int dimension = 20;
 
-    //   for (int)
     for (int j = 0; j < HEIGHT / dimension; j++) {
       height = j * dimension;
-      if (j % 2 ==0) {
-    for (int i = 0; i <= WIDTH / dimension; i++)  {
-        if ( i % 2 == 0 ) {
-          sum = i * dimension;
-          graphics.fillRect(x + sum, y + height, dimension, dimension);
-        } else {
-          graphics.fillRect(x + sum + dimension, y + height + dimension, dimension, dimension);
-        }
-        }
-
-
-
+      if (j % 2 == 0) {
+        for (int i = 0; i <= WIDTH / dimension; i++) {
+          if (i % 2 == 0) {
+            sum = i * dimension;
+            graphics.fillRect(x + sum, y + height, dimension, dimension);
+          } else {
+            graphics.fillRect(x + sum + dimension, y + height + dimension, dimension, dimension);
+          }
         }
       }
     }
+  }
+
   // Don't touch the code below
   static int WIDTH = 320;
   static int HEIGHT = 320;
