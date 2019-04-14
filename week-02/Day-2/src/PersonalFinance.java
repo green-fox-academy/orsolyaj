@@ -4,7 +4,7 @@ import java.util.List;
 
 public class PersonalFinance {
   public static void main(String[] args) {
-    List<Integer> fin= new ArrayList<>
+    List<Integer> fin = new ArrayList<>
             (Arrays.asList(500, 1000, 1250, 175, 800, 120));
     int maxNum = fin.get(0);
     for (int i = 0; i <= fin.size() - 1; i++) {
@@ -12,7 +12,7 @@ public class PersonalFinance {
         maxNum = fin.get(i);
       }
     }
-    System.out.println(maxNum);
+    System.out.println("greatest:" + maxNum);
 
     int minNum = fin.get(0);
     for (int i = 0; i <= fin.size() - 1; i++) {
@@ -20,12 +20,15 @@ public class PersonalFinance {
         minNum = fin.get(i);
       }
     }
-    System.out.println(minNum);
+    System.out.println("minimum" + minNum);
 
     int sum = 0;
     for (int i = 0; i < fin.size() - 1; ++i) {
       sum += fin.get(i);
     }
-    System.out.println(sum);
+    System.out.println("sum" + sum);
+    int average = sum / fin.size();
+    System.out.println("average" + average);
   }
 }
+
