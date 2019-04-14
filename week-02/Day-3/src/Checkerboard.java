@@ -9,19 +9,27 @@ public class Checkerboard {
     int x = 0;
     int y = 0;
     int sum = 0;
-    //for (int)
-    for (int i = 0; i < WIDTH; i++) {
-      for (int j = 0; j < HEIGHT; j++) {
-        sum += i + 20;
-        if (i % 2 == 0) {
-          graphics.fillRect(x + sum, y , 10, 10);
+    int height = 0;
+    int dimension = 20;
+
+    //   for (int)
+    for (int j = 0; j < HEIGHT / dimension; j++) {
+      height = j * dimension;
+      if (j % 2 ==0) {
+    for (int i = 0; i <= WIDTH / dimension; i++)  {
+        if ( i % 2 == 0 ) {
+          sum = i * dimension;
+          graphics.fillRect(x + sum, y + height, dimension, dimension);
+        } else {
+          graphics.fillRect(x + sum + dimension, y + height + dimension, dimension, dimension);
+        }
+        }
+
+
+
         }
       }
     }
-
-
-
-  }
   // Don't touch the code below
   static int WIDTH = 320;
   static int HEIGHT = 320;
