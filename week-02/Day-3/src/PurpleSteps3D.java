@@ -7,8 +7,8 @@ import static javax.swing.JFrame.EXIT_ON_CLOSE;
 public class PurpleSteps3D {
   public static void mainDraw(Graphics graphics) {
     int sum = 0;
-    for (int i = 0; i < 6; i++) {
-      sum += i * 10;
+    for (int i = 0; i < 7; i++) {
+      sum += (i - 1) * 10;
       graphics.setColor(Color.pink);
       graphics.fillRect(sum, sum, i * 10, i * 10);
     }

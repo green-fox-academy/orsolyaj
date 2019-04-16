@@ -9,6 +9,12 @@ public class ProductDatabase {
     dat.put("Apples", 150);
     dat.put("Bread", 50);
     dat.put("Chicken", 550);
+    System.out.println(dat.get("fish"));
+
+
+    for (int i = 0; i < dat.size() - 1; i++) {
+
+    }
 
   }
 }

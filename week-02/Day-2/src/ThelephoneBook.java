@@ -10,8 +10,16 @@ public class ThelephoneBook {
     pb.put("Brooke", "307-687-2982");
 
     System.out.println("Johns no. is: " + pb.get("John"));
+    System.out.println(pb.containsKey("Chris E."));
 
-    System.out.println("Johns no. is: " + pb.getKey("307-687-2982"));
+    if (pb.containsValue("307-687-2982")) {
+      for  (String key : pb.keySet()) {
+        if (pb.get(key) =="307-687-2982") {
+          System.out.println(key);
+        }
+      }
+    }
+
 
   }
 }
