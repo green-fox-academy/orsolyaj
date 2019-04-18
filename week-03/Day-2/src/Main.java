@@ -41,6 +41,7 @@ public class Main {
         System.out.println("I choose you, " + pokemonOfAsh.get(i).name);
       }
     }
+
 //    Fleet
     Thing task1 = new Thing("Get milk");
     Thing task2 = new Thing("Remove obstacles");
@@ -56,13 +57,14 @@ public class Main {
     things.add(task4);
     System.out.println(things);
 
+//    Dice Set
 
-   /* DiceSet newset = new DiceSet();
+    DiceSet newset = new DiceSet();
     newset.roll();
     System.out.println(newset.getCurrent());
-    newset.reroll();
 
-    */
+    System.out.println(newset.getCurrent());
+
   }
 
     private static List<Pokemon> initializePokemons () {
