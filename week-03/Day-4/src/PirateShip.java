@@ -1,6 +1,8 @@
 import java.util.ArrayList;
 import java.util.List;
 
+import static java.lang.Math.random;
+
 public class PirateShip {
   List<Pirate> crew;
   Pirate captain;
@@ -11,36 +13,32 @@ public class PirateShip {
   }
 
   public void fillShip() {
-    this.crew.add(new Pirate());
-    if (crew.contains(captain) == false) {
-      this.crew.add(captain);
+    double x = (int) Math.random() * 10;
+    for (int i = 0; i <= x; i++) {
+      this.crew.add(new Pirate());
     }
+    this.crew.add(captain);
   }
-  public void piratesAlive() {
+
+  public int piratesAlive() {
     int piratesAlive = 0;
-    for (int i = 0; i < crew.size(); i++) {
-      if (crew.get(i).life == true) {
+    for (int i = 0; i < this.crew.size(); i++) {
+      if (this.crew.get(i).life == true) {
         piratesAlive++;
       }
-    }
+    } return piratesAlive;
   }
 
   public void details() {
     System.out.println("Captain is alive: " + captain.life + "Captain rum level: " + captain.rumlevel);
-    int piratesAlive = 0;
-    for (int i = 0; i < crew.size(); i++) {
-      if (crew.get(i).life == true) {
-        piratesAlive++;
-      }
-    }
-    System.out.println("Pirates alive: " + piratesAlive);
+    System.out.println("Pirates alive: " + this.piratesAlive());
   }
 
   public void battle(PirateShip otherShip) {
-    for (int i; i++) {
+    if ( piratesAlive(this.crew) + )
+
+
 
     }
   }
 
-
-}
