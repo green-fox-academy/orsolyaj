@@ -29,7 +29,7 @@ public class Pirate {
     } else if (this.life == false) {
       System.out.println("winner " + secondPirate);
     } else if (secondPirate.life == false) {
-//      System.out.println("winner " + this.Pirate);
+      System.out.println("winner " + this);
     } else {
       System.out.println("They passed out");
     }
