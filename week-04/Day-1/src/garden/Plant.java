@@ -9,6 +9,7 @@ public class Plant {
   public Plant() {
     this.color = " green ";
     this.waterAmount = 0;
+    this.waterTreshold = 0;
   }
 
   public Plant(String color) {
@@ -23,6 +24,14 @@ public class Plant {
       setNeedsWatering(false);
     }
     return needsWatering;
+  }
+
+  public int getWaterTreshold() {
+    return waterTreshold;
+  }
+
+  public void setWaterTreshold(int waterTreshold) {
+    this.waterTreshold = waterTreshold;
   }
 
   public String getColor() {

@@ -4,6 +4,6 @@ public class Flower extends Plant {
 
   public Flower(String color) {
     super(color);
-    int waterTreshhold = 5;
+    setWaterTreshold(5);
   }
 }
