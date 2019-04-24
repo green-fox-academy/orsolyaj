@@ -1,15 +1,14 @@
 package main.java.music;
 
 public class Violin extends StringedInstrument {
+  static final String NAME = "Violin";
 
   public Violin() {
-    name = "Violin";
-    setNumberOfStrings(4);
+    super(NAME, 4);
   }
 
   public Violin(int numberOfStrings) {
-    super(numberOfStrings);
-    name = "Violin";
+    super(NAME, numberOfStrings);
   }
 
   @Override

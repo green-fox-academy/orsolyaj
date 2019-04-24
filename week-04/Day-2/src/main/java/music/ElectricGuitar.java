@@ -1,16 +1,16 @@
 package main.java.music;
 
-public class ElectricGuitar extends StringedInstrument{
+public class ElectricGuitar extends StringedInstrument {
+  static final String NAME = "Electric guitar";
 
   public ElectricGuitar() {
-    setNumberOfStrings(6);
-    name = "Electric Guitar";
+    super(NAME, 6);
   }
 
   public ElectricGuitar(int numberOfStrings) {
-    super (numberOfStrings);
-    name = "Electric Guitar";
+    super(NAME, numberOfStrings);
   }
+
   @Override
   public String sound() {
     String sounds = "Twang";

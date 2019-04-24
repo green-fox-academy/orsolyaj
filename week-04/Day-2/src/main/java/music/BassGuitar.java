@@ -1,15 +1,14 @@
 package main.java.music;
 
 public class BassGuitar extends StringedInstrument {
+  static final String NAME = "Bass Guitar";
 
   public BassGuitar() {
-    name = "Bass Guitar";
-    setNumberOfStrings(4);
+    super(NAME, 4);
   }
 
   public BassGuitar(int numberOfStrings) {
-    super(numberOfStrings);
-    name = "Bass Guitar";
+    super(NAME, numberOfStrings);
   }
 
   @Override

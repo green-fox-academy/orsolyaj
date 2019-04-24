@@ -7,7 +7,8 @@ public class StringedInstrument extends Instrument {
     numberOfStrings = 4;
   }
 
-  public StringedInstrument( int numberOfStrings) {
+  public StringedInstrument(String name, int numberOfStrings) {
+    super(name);
     this.numberOfStrings = numberOfStrings;
   }
 
