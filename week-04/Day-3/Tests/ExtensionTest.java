@@ -9,7 +9,7 @@ public class ExtensionTest {
 
   @Test
   public void testAdd_2and3is5() {
-    assertEquals(5, extension.add(2, 3));
+    assertEquals(4, extension.add(2, 2));
   }
 
   @Test
@@ -24,12 +24,12 @@ public class ExtensionTest {
 
   @Test
   public void testMaxOfThree_first() {
-    assertEquals(5, extension.maxOfThree(5, 4, 3));
+    assertEquals(6, extension.maxOfThree(6, 4, 3));
   }
 
   @Test
   public void testMaxofThree_ShouldNotbefirst() {
-    assertNotEquals(3, extension.maxOfThree(3, 4, 5));
+    assertNotEquals(5, extension.maxOfThree(3, 4, 7));
   }
 
   @Test
