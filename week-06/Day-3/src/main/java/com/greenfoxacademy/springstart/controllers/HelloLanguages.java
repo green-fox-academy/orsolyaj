@@ -17,11 +17,13 @@ public class HelloLanguages {
 
   @RequestMapping("/web/languages")
   public String languages(Model model, @RequestParam String name) {
+    int number = (int) (10 + Math.random()*10);
     String newestColor = colors[(int) (Math.random() * colors.length)];
     String language = hellos[(int) (Math.random() * hellos.length)];
     model.addAttribute("name", name);
     model.addAttribute("language", language);
     model.addAttribute("color", newestColor);
+    model.addAttribute("number",number);
     return "languages";
   }
 }
