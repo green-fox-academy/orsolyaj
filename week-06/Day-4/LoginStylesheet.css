@@ -44,6 +44,11 @@ input {
   border: 1px solid #DCDCDC;
 }
 
+input[type="password"] {
+  background: url(eye.png) no-repeat;
+  background-position: 170px 4px;
+}
+
 button {
   background: black;
   padding: 7px 15px;
