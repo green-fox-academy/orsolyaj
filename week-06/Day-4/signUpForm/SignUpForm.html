@@ -1,0 +1,16 @@
+<DOCTYPE html>
+  <meta charset="utf-8">
+  <head>
+    <link href="SignUpStylesheet.css" rel="stylesheet" type="text/css" >
+  </head>
+  <body>
+    <form action="https://newsletter-ws.herokuapp.com/register" method="post">
+      <h1>Sign up</h1>
+      
+      <input type="text" name="username" placeholder="Username">
+      <input type="email" name="email" placeholder="E-mail">
+      <input id="password" name="password" type="password" pattern="^\S{6,}$" onchange="this.setCustomValidity(this.validity.patternMismatch ? 'Must have at least 6 characters' : ''); if(this.checkValidity()) form.password_two.pattern = this.value;" placeholder="Password">
+      <input id="password_two" name="password_two" type="password" pattern="^\S{6,}$" onchange="this.setCustomValidity(this.validity.patternMismatch ? 'Please enter the same Password as above' : '');" placeholder="Retype password">
+      <button type="submit" name="signup">SIGN ME UP</button>
+    </form>
+  </body>
