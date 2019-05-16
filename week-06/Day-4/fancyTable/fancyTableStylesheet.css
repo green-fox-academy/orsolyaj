@@ -1,0 +1,37 @@
+body {
+  background: cornflowerblue;
+  font-family: arial;
+}
+
+table {
+  width: 600px;
+  text-align: left;
+  border-radius: 4px;
+}
+
+table, th, td {
+  border: 1px solid darkgray;
+  border-collapse: collapse;
+  padding: 10px 20px;
+}
+
+thead, tr {
+  height: 60px;
+}
+
+th {
+  background-color: black;
+  color: #fff;
+  font-weight: 400;
+}
+
+tr {
+  color: dimgray;
+  background: #fff;
+}
+
+tr:nth-child(2n+1) {
+  background-color: lightgray;
+}
+
+
