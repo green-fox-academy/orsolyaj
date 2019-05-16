@@ -6,13 +6,20 @@
   <body>
     <form>
       <h1>ACCOUNT LOGIN</h1>
-      <div>
-      <label>USERNAME</label><br>
-      <input type="text" autofocus><br>
-      <label>PASWORD</label><br>
-      <input type="password"><br>
-      <label>Forgot password?</label><br>
-      <button type="submit">Login</button>
+      
+        <div class="fields">
+         <label for="username">USERNAME</label>
+         <input type="text" id="username" name="username" autofocus>
+         <label for="psw">PASWORD</label>
+         <input type="password" id="psw" name="psw">
+        </div>
+     
+        <div class="forgot">
+          <label for="psw">Forgot password?</label>
+        </div>
+      
+        <div class="button"> 
+          <button type="submit" value="Login">Login</button>
       </div>
     </form>
   </body>
