@@ -7,6 +7,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 public class Controllers {
   @RequestMapping("/webshop")
-  public String webshop()
-
+  public String webshop() {
+    return "webshop";
+  }
 }
