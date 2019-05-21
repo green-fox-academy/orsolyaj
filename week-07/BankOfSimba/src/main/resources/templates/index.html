@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<link th:href="@{stylesheet.css}" rel="stylesheet" type="text/css">
+<head>
+  <meta charset="UTF-8">
+  <title>BankAccounts</title>
+</head>
+<body>
+<table>
+  <thead>
+  <th>Name</th>
+  <th>Account Balance</th>
+  <th>Animal type</th>
+  <th>Index</th>
+  <th>King</th>
+  <th>Gender</th>
+
+  </thead>
+  <tr th:each="bankAccount : ${accountList}">
+    <td th:text="${bankAccount.getName()}"></td>
+    <td th:text="|${#numbers.formatDecimal(bankAccount.getBalance(),1,2)} Gold|"></td>
+    <td th:text="${bankAccount.getAnimalType()}"></td>
+    <td th:text="${bankAccountStat.count}"></td>
+    <td class="king" th:text="${bankAccount.isKing()} ? 'King' : 'Peasant'"></td>
+    <td th:text="${bankAccount.isMoral()} ? 'Good' : 'Bad'"></td>
+  </tr>
+</table>
+<div class="slectForm">
+  <form th:action="@{/form}" th:method="post" >
+<select name="caracter">
+  <option th:each="bankAccount : ${accountList}" th:text="${bankAccount.name}" th:value="${bankAccountStat.index}"></option>
+</select>
+    <button type="submit">submit</button>
+  </form>
+</div>
+</body>
+</html>
