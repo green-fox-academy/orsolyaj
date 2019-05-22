@@ -1,6 +1,10 @@
 package com.day3.dependecy;
 
+import com.day3.dependecy.service.MyColorable;
+import com.day3.dependecy.service.Printer;
+import com.day3.dependecy.service.Red;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -8,8 +12,10 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 @SpringBootApplication
 public class DependecyApplication implements CommandLineRunner {
   private Printer printer;
+  private MyColorable colorable;
 
-  DependecyApplication(Printer printer) {
+  DependecyApplication(@Qualifier("red")  MyColorable colorable, Printer printer) {
+    this.colorable= colorable;
     this.printer = printer;
   }
 
@@ -20,5 +26,6 @@ public class DependecyApplication implements CommandLineRunner {
   @Override
   public void run(String... args) throws Exception {
     printer.log("SUP");
+    colorable.printcolor();
   }
 }

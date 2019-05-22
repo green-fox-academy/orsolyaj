@@ -1,4 +1,4 @@
-package com.day3.dependecy;
+package com.day3.dependecy.service;
 
 import org.springframework.stereotype.Service;
 
