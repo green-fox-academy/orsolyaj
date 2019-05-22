@@ -24,15 +24,26 @@ public class MainPageController {
   @GetMapping("/useful/colored")
   public String background(Model model) {
     model.addAttribute("color", utilityService.randomColor());
-    return"index";
+    return "index";
   }
 
 
   @GetMapping("useful/email")
-  public String email(@RequestParam String email) {
+  public String email(@RequestParam String email, Model model) {
     if (utilityService.validateEmail(email)) {
-      return "valid";
-    } else
-      return "index";
+      model.addAttribute("text", "valid");
+      model.addAttribute("color", "color: green");
+    } else {
+      model.addAttribute("text", "invalid");
+      model.addAttribute("color", "color: red");
+    }
+    return "valid";
+  }
+
+  @GetMapping("useful/caesar")
+  public String coder(@RequestParam String text, @RequestParam int number, Model model) {
+    text= utilityService.caesar(text,number);
+    model.addAttribute("text", text);
+    return "index";
   }
 }

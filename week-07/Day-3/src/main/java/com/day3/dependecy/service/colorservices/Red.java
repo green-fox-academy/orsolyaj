@@ -1,4 +1,4 @@
-package com.day3.dependecy.service;
+package com.day3.dependecy.service.colorservices;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;

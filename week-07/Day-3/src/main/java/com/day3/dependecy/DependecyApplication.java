@@ -1,9 +1,7 @@
 package com.day3.dependecy;
 
-import com.day3.dependecy.service.MyColorable;
-import com.day3.dependecy.service.Printer;
-import com.day3.dependecy.service.Red;
-import org.springframework.beans.factory.annotation.Autowired;
+import com.day3.dependecy.service.colorservices.MyColorable;
+import com.day3.dependecy.service.colorservices.Printer;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
