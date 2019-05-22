@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>gfalist</title>
+</head>
+<body>
+<table>
+  <thead>
+  <tr>
+    <th> Student </th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr th:each="student : ${student.findAll()}">
+    <td><span th:text="${student}"></span></td>
+  </tr>
+  </tbody>
+</table>
+
+</body>
+</html>

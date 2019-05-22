@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>namcheckform</title>
+</head>
+<body>
+<form th:action="@{/gfa/check}" th:method="post">
+  <label for="name">enter name</label>
+  <input type="text"  id="name">
+  <button type="submit">check</button>
+</form>
+<p th:text="${text}"></p>
+
+</body>
+</html>
