@@ -1,13 +1,21 @@
 package com.gfa.foxclub.model;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Fox {
   private String name;
-  private int tricks;
   private String eat;
   private String drink;
+  private List<String> trickList;
 
   public Fox(String name) {
     this.name = name;
+    this.trickList = new ArrayList<>();
+  }
+
+  public void addTrick(String trick) {
+    this.trickList.add(trick);
   }
 
   public String getName() {
@@ -16,14 +24,6 @@ public class Fox {
 
   public void setName(String name) {
     this.name = name;
-  }
-
-  public int getTricks() {
-    return tricks;
-  }
-
-  public void setTricks(int tricks) {
-    this.tricks = tricks;
   }
 
   public String getEat() {
@@ -40,5 +40,13 @@ public class Fox {
 
   public void setDrink(String drink) {
     this.drink = drink;
+  }
+
+  public List<String> getTrickList() {
+    return trickList;
+  }
+
+  public void setTrickList(List<String> trickList) {
+    this.trickList = trickList;
   }
 }

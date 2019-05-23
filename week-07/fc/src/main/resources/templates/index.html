@@ -12,10 +12,13 @@
   <a th:href="@{/fox/trick(name=${name})}">TRAIN</a>
 </div>
 <img src="greenfox.png">
-<p>This is Foxy, currently living on Pasta and Water. Foxy knows tricks.</p>
+<p th:text="|This is ${name} currently living on Pasta and Water. ${name} knows ${trickcount} tricks.|"></p>
 <h2>Known tricks</h2>
 <ul>
   <li>trick</li>
+  <li th:if="${trickcount != 0}" th:each="trick : ${fox.getTrickList()}"
+  th:text="${trick}"></li>
+  <li th:unless="${trickcount == 0}">Learn some</li>
 </ul>
 
 </body>
