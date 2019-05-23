@@ -32,7 +32,7 @@ public class StudentService {
   }
 
   public String containsIt(String name) {
-    if(name.contains(name)) {
+    if(names.contains(name)) {
       return "list contains name";
     } else return "list doesnt contain name";
   }

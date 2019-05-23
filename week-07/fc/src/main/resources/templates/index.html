@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" >
+<head>
+  <meta charset="UTF-8">
+  <title>foxClub</title>
+</head>
+<body>
+<div class="header">
+  <a th:href="@{/fox/login(name= ${name})}">LOGIN</a>
+  <a th:href="@{/fox/home(name= ${name})}">HOME</a>
+  <a th:href="@{/fox/feed(name=${name})}">FEED</a>
+  <a th:href="@{/fox/trick(name=${name})}">TRAIN</a>
+</div>
+<img src="greenfox.png">
+<p>This is Foxy, currently living on Pasta and Water. Foxy knows tricks.</p>
+<h2>Known tricks</h2>
+<ul>
+  <li>trick</li>
+</ul>
+
+</body>
+</html>

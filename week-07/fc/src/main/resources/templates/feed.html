@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>feed</title>
+</head>
+<body>
+<div class="header">
+  <a th:href="@{/fox/login(name= ${name})}">LOGIN</a>
+  <a th:href="@{/fox/home(name= ${name})}">HOME</a>
+  <a th:href="@{/fox/feed(name=${name})}">FEED</a>
+  <a th:href="@{/fox/trick(name=${name})}">TRAIN</a>
+</div>
+<form >
+  <label for="food">Food</label>
+  <select id="food">
+    <option value="pasta">PASTA</option>
+    <option value="meat">MEAT</option>
+    <option value="cake">CHOCOLATE CAKE</option>
+  </select>
+  <label for="drink">Drink</label>
+  <select id="drink">
+    <option value="water">WATER</option>
+    <option value="juice">ORANGE JUICE</option>
+    <option value="capri">CAPRI-SUN</option>
+  </select>
+  <button type="submit">Change</button>
+</form>
+</body>
+</html>

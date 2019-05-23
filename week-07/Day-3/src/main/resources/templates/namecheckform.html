@@ -7,7 +7,7 @@
 <body>
 <form th:action="@{/gfa/check}" th:method="post">
   <label for="name">enter name</label>
-  <input type="text"  id="name">
+  <input type="text"  id="name" name="name">
   <button type="submit">check</button>
 </form>
 <p th:text="${text}"></p>

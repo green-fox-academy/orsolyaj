@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>Trick</title>
+</head>
+<body>
+<div class="header">
+  <a th:href="@{/fox/login(name= ${name})}">LOGIN</a>
+  <a th:href="@{/fox/home(name= ${name})}">HOME</a>
+  <a th:href="@{/fox/feed(name=${name})}">FEED</a>
+  <a th:href="@{/fox/trick(name=${name})}">TRAIN</a>
+</div>
+<form>
+  <label for="trick">Trick</label>
+  <select id="trick">
+    <option value="fd">FENDER DRAG</option>
+    <option value="yur">YURCHENKO</option>
+    <option value="bhs">BACK HANDSPRING</option>
+  </select>
+  <button type="submit">Train</button>
+</form>
+</body>
+</html>

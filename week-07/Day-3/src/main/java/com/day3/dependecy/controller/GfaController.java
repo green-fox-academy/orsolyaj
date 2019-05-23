@@ -45,6 +45,6 @@ public class GfaController {
   @PostMapping("/gfa/check")
   public String namecheckin(String name, Model model) {
     model.addAttribute("text", studentService.containsIt(name));
-    return "redirect:/gfa/list";
+    return "namecheckform";
   }
 }

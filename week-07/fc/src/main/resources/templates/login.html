@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>login</title>
+</head>
+<body>
+<div class="header">
+<!--  <a th:href="@{/fox/login(name= ${name})}">LOGIN</a>-->
+<!--  <a th:href="@{/fox/home(name= ${name})}">HOME</a>-->
+<!--  <a th:href="@{/fox/feed(name=${name})}">FEED</a>-->
+<!--  <a th:href="@{/fox/trick(name=${name})}">TRAIN</a>-->
+</div>
+<h1>Welcome to Programmer Fox Club!</h1>
+<p>Please provide a name so you can associate it to your pet</p>
+<form th:action="@{/fox/login}" th:method="post">
+  <label for="name">Name</label>
+  <input type="text" id="name" name="name">
+</form>
+</body>
+</html>
