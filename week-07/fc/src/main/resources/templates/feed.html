@@ -6,23 +6,21 @@
 </head>
 <body>
 <div class="header">
-  <a th:href="@{/fox/login(name= ${name})}">LOGIN</a>
+  <a th:href="@{/fox/login}">LOGIN</a>
   <a th:href="@{/fox/home(name= ${name})}">HOME</a>
   <a th:href="@{/fox/feed(name=${name})}">FEED</a>
   <a th:href="@{/fox/trick(name=${name})}">TRAIN</a>
 </div>
-<form >
+<form th:action="@{/fox/feed(name=${name})}" th:method="post">
   <label for="food">Food</label>
-  <select id="food">
-    <option value="pasta">PASTA</option>
-    <option value="meat">MEAT</option>
-    <option value="cake">CHOCOLATE CAKE</option>
+  <select id="food" name="eat">
+    <option th:each="food : ${foodlist}"
+            th:text="${food}" th:value="${food}"></option>
   </select>
   <label for="drink">Drink</label>
-  <select id="drink">
-    <option value="water">WATER</option>
-    <option value="juice">ORANGE JUICE</option>
-    <option value="capri">CAPRI-SUN</option>
+  <select id="drink" name="drink">
+    <option th:each="drink : ${drinklist}"
+            th:text="${drink}" th:value="${drink}"></option>
   </select>
   <button type="submit">Change</button>
 </form>

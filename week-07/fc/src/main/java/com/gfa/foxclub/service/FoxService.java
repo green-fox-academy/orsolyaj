@@ -18,19 +18,26 @@ public class FoxService {
   }
 
   public void addFox(String name) {
-    if (this.foxList.isEmpty()) {
-      this.foxList.add(new Fox(name));
-    } else if (this.foxList.isEmpty() == false && this.foxList.contains(foxByName(name)) == false) {
-      this.foxList.add(new Fox(name));
-    } else
-      System.out.println("Fox already exists");
+//    if (this.foxList.isEmpty()) {
+//      this.foxList.add(new Fox(name));
+//    } else if (this.foxList.contains(foxByName(name))== false) {
+//      this.foxList.add(new Fox(name));
+//    } else
+//      System.out.println("Fox already exists");
+    if (foxList.contains(name) == false) {
+      foxList.add(new Fox(name));
+    }
   }
 
   public Fox foxByName(String name) {
-    List<Fox> fox = this.foxList.stream()
-            .filter(f -> f.getName().equals(name))
-            .collect(Collectors.toList());
-    return fox.get(0);
+//    List<Fox> fox = this.foxList.stream()
+//            .filter(f -> f.getName().equals(name))
+//            .collect(Collectors.toList());
+//    return fox.get(0);
+    return foxList.stream()
+            .filter(fox -> fox.getName().equals(name))
+            .findAny()
+            .orElse(null);
   }
 
   public int trickCount(String name) {

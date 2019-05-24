@@ -6,20 +6,18 @@
 </head>
 <body>
 <div class="header">
-  <a th:href="@{/fox/login(name= ${name})}">LOGIN</a>
+  <a th:href="@{/fox/login}">LOGIN</a>
   <a th:href="@{/fox/home(name= ${name})}">HOME</a>
   <a th:href="@{/fox/feed(name=${name})}">FEED</a>
   <a th:href="@{/fox/trick(name=${name})}">TRAIN</a>
 </div>
 <img src="greenfox.png">
-<p th:text="|This is ${name} currently living on Pasta and Water. ${name} knows ${trickcount} tricks.|"></p>
+<p th:text="|This is ${name} currently living on ${eat} and ${drink}. ${name} knows ${trickcount} tricks.|"></p>
 <h2>Known tricks</h2>
-<ul>
-  <li>trick</li>
-  <li th:if="${trickcount != 0}" th:each="trick : ${fox.getTrickList()}"
-  th:text="${trick}"></li>
-  <li th:unless="${trickcount == 0}">Learn some</li>
+<ul th:if="${trickcount != 0}" th:each="trick : ${fox.getTrickList()}">
+<!--  <li>trick</li>-->
+  <li th:text="${trick}"></li>
 </ul>
-
+<span th:unless="${trickcount != 0}">Learn some</span>
 </body>
 </html>

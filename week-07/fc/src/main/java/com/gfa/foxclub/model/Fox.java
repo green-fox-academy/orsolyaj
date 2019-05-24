@@ -11,6 +11,8 @@ public class Fox {
 
   public Fox(String name) {
     this.name = name;
+    eat = "pasta";
+    drink = "water";
     this.trickList = new ArrayList<>();
   }
 

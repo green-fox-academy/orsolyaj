@@ -34,15 +34,17 @@ public class HomeController {
     model.addAttribute("name", name);
     model.addAttribute("fox",foxService.foxByName(name));
     model.addAttribute("trickcount", foxService.trickCount(name));
+    model.addAttribute("eat",foxService.foxByName(name).getEat());
+    model.addAttribute("drink",foxService.foxByName(name).getDrink());
     return "index";
   }
 
-  @GetMapping("/feed")
-  public String feed(@RequestParam String name, Model model) {
-    model.addAttribute("name", name);
-    model.addAttribute("foxes",foxService.foxByName(name));
-    return "feed";
-  }
+//  @GetMapping("/feed")
+//  public String feed(@RequestParam String name, Model model) {
+//    model.addAttribute("name", name);
+//    model.addAttribute("foxes",foxService.foxByName(name));
+//    return "feed";
+//  }
 
   @GetMapping("/trick")
   public String train(@RequestParam String name, Model model) {
