@@ -18,5 +18,10 @@
   <li th:text="${trick}"></li>
 </ul>
 <span th:unless="${trickcount != 0}">Learn some</span>
+<div class="action">
+  <ul th:each="action : ${actionlist}">
+    <li th:text="${action}"></li>
+  </ul>
+</div>
 </body>
 </html>

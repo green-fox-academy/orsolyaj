@@ -34,6 +34,7 @@ public class FoxController {
   public String food(@RequestParam String name, String eat, String drink) {
     foxService.foxByName(name).setEat(eat);
     foxService.foxByName(name).setDrink(drink);
+    foxService.logAction("Food was set to " + eat + "Drink was set to " + drink);
     return "redirect:/fox/home?name=" + name;
   }
 }

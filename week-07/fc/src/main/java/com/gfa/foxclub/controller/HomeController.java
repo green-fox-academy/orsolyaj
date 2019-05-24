@@ -26,6 +26,7 @@ public class HomeController {
   @PostMapping("/login")
   private String postName(String name) {
     foxService.addFox(name);
+    foxService.logAction("Created fox: " + name);
     return "redirect:/fox/home?name=" + name;
   }
 
@@ -36,6 +37,7 @@ public class HomeController {
     model.addAttribute("trickcount", foxService.trickCount(name));
     model.addAttribute("eat",foxService.foxByName(name).getEat());
     model.addAttribute("drink",foxService.foxByName(name).getDrink());
+    model.addAttribute("actionlist", foxService.getLast5());
     return "index";
   }
 

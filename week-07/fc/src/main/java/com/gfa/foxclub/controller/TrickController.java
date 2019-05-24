@@ -31,8 +31,9 @@ public class TrickController {
 
   @PostMapping("/trick")
   public String food(@RequestParam String name, String trick, Model model) {
-    if (foxService.foxByName(name).getTrickList().contains(trick) == false) {
+    if (!foxService.foxByName(name).getTrickList().contains(trick)) {
       foxService.foxByName(name).getTrickList().add(trick);
+      foxService.logAction(name + " learned this trick: " + trick );
       return "redirect:/fox/home?name=" + name;
     } else
       model.addAttribute("knowntrick", "Already knows it");
