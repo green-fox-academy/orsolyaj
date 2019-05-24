@@ -11,14 +11,14 @@
   <a th:href="@{/fox/feed(name=${name})}">FEED</a>
   <a th:href="@{/fox/trick(name=${name})}">TRAIN</a>
 </div>
-<form>
+<form th:action="@{/fox/trick(name=${name})}" th:method="post">
   <label for="trick">Trick</label>
-  <select id="trick">
-    <option value="fd">FENDER DRAG</option>
-    <option value="yur">YURCHENKO</option>
-    <option value="bhs">BACK HANDSPRING</option>
+  <select id="trick" name="trick">
+    <option th:each="trick : ${tricklist}"
+            th:text="${trick}" th:value="${trick}"></option>
   </select>
   <button type="submit">Train</button>
 </form>
+<p th:text="${knowntrick}"></p>
 </body>
 </html>

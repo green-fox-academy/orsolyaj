@@ -46,10 +46,10 @@ public class HomeController {
 //    return "feed";
 //  }
 
-  @GetMapping("/trick")
-  public String train(@RequestParam String name, Model model) {
-    model.addAttribute("name", name);
-    model.addAttribute("foxes",foxService.foxByName(name));
-    return "trick";
-  }
+//  @GetMapping("/trick")
+//  public String train(@RequestParam String name, Model model) {
+//    model.addAttribute("name", name);
+//    model.addAttribute("foxes",foxService.foxByName(name));
+//    return "trick";
+//  }
 }
