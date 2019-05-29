@@ -5,8 +5,7 @@ import com.connection.sqlconnection.service.TodoService;
 import jdk.nashorn.internal.objects.annotations.Getter;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.*;
 
 @Controller
 @RequestMapping("/todo")
@@ -27,5 +26,11 @@ public class TodoController {
   public String active(Model model) {
     model.addAttribute("todos", todoService.listActive());
     return "todolist";
+  }
+
+  @GetMapping("/delete")
+  public String delete(@RequestParam Long id) {
+    todoService.delete(id);
+    return "redirect:/todo/list";
   }
 }

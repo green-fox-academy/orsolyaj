@@ -6,6 +6,7 @@
 </head>
 <body>
 <h1>Todos for today:</h1>
+<a th:href="@{/todo/add}">Add task</a>
 <table>
   <thead>
   <th>ID</th>
@@ -18,6 +19,8 @@
     <td th:text="${todo.getTitle()}"></td>
     <td th:text="${todo.isDone()}"></td>
     <td th:text="${todo.isUrgent()}"></td>
+    <td><a th:href="|@{/todo/delete}?id=${todo.id}|">delete</a></td>
+    <td><a th:href="|@{/todo/edit}?id=${todo.id}|">edit</a></td>
   </tr>
 </table>
 </body>
