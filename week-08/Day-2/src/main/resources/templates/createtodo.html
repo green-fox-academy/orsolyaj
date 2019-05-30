@@ -2,16 +2,22 @@
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link href="/webjars/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet"/>
   <title>create todo</title>
 </head>
 <body>
-<form th:action="@{/todo/add}" th:method="post" th:object="${todo}">
-  <label for="task">add task</label>
-  <input type="text" name="task" id="task" th:field="*{title}">
-  <label for="urgent">check if urgent</label>
-  <input type="checkbox" name="urgent" id="urgent" th:field="*{urgent}">
-  <button type="submit">submit</button>
-</form>
-
+<h1>Add Task</h1>
+<div class="form-group">
+  <form th:action="@{/todo/add}" th:method="post" th:object="${todo}">
+    <label for="task">add task</label>
+    <input type="text" name="task" id="task" th:field="*{title}">
+    <label for="urgent">check if urgent</label>
+    <input type="checkbox" name="urgent" id="urgent" th:field="*{urgent}">
+    <button type="submit">submit</button>
+  </form>
+</div>
 </body>
+<script src="/webjars/jquery/3.4.1/jquery.min.js"></script>
+<script src="/webjars/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 </html>

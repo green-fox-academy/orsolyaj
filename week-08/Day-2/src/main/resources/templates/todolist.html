@@ -2,26 +2,41 @@
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link href="/webjars/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet"/>
   <title>todo list</title>
 </head>
 <body>
 <h1>Todos for today:</h1>
-<a th:href="@{/todo/add}">Add task</a>
-<table>
-  <thead>
-  <th>ID</th>
-  <th>ACTION</th>
-  <th>DONE</th>
-  <th>URGENT</th>
-  </thead>
-  <tr th:each="todo : ${todos}">
-    <td th:text="${todo.getId()}"></td>
-    <td th:text="${todo.getTitle()}"></td>
-    <td th:text="${todo.isDone()}"></td>
-    <td th:text="${todo.isUrgent()}"></td>
-    <td><a th:href="|@{/todo/delete}?id=${todo.id}|">delete</a></td>
-    <td><a th:href="|@{/todo/edit}?id=${todo.id}|">edit</a></td>
-  </tr>
-</table>
+<!--<form th:action="|@{/todo/search}?id=${todo.id}|" th:method="post" th:object="${todo}">-->
+<!--<input type="search"  placeholder="search">-->
+<!--<button type="submit">go</button>-->
+<!--</form>-->
+<a class="btn btn-info" th:href="@{/todo/assignees}">List of assignees</a>
+<a class="btn btn-info" th:href="@{/todo/add}">Add task</a>
+<div class="container">
+  <table>
+    <div class="table-row">
+      <thead>
+      <th>ID</th>
+      <th>ACTION</th>
+      <th>DONE</th>
+      <th>URGENT</th>
+      </thead>
+    </div>
+    <div class="table-row">
+      <tr th:each="todo : ${todos}">
+        <div class="col-1"> <td th:text="${todo.getId()}"></td> </div>
+        <div class="col-6"><td th:text="${todo.getTitle()}"></td></div>
+        <div class="col-2"><td th:text="${todo.isDone()}"></td></div>
+        <div class="col-2"><td th:text="${todo.isUrgent()}"></td></div>
+        <td><a class="btn btn-danger" th:href="|@{/todo/delete}?id=${todo.id}|">delete</a></td>
+        <td><a class="btn btn-warning" th:href="|@{/todo/edit}?id=${todo.id}|">edit</a></td>
+      </tr>
+    </div>
+  </table>
+</div>
 </body>
+<script src="/webjars/jquery/jquery.min.js"></script>
+<script src="/webjars/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 </html>
