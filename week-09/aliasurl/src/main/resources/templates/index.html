@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>URLalias</title>
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+<p>
+  <span th:if="${error == null }" th:text="${text}"></span>
+  <span th:unless="${error == null }" th:text="${error}"></span>
+</p>
+
+<form action="/save-link" method="post">
+  <label for="url">URL:</label>
+  <input type="url" th:value="${aliasModelurl}" name="url" id="url" >
+  <label for="aliasModel">Alias</label>
+  <input type="text" name="alias" th:value="${aliasModelalias}" id="aliasModel">
+  <button type="submit">submit</button>
+</form>
+
+</body>
+<script src="/webjars/jquery/3.4.1/jquery.min.js"></script>
+<script src="/webjars/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</html>
