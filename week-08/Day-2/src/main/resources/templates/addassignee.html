@@ -5,6 +5,10 @@
   <title>Add assigne</title>
 </head>
 <body>
+</div>
+<header>
+  <div th:replace="headertemplate :: header" class="container clearfix" ></div>
+</header>
 <h1>Add assignee</h1>
 <form th:action="@{/todo/addassignee}" th:method="post" th:object="${assignee}">
 <label for="name">Name</label>

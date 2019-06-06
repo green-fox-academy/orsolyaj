@@ -14,7 +14,7 @@ import java.util.List;
 public class Assignee {
   @Id
   @GeneratedValue(strategy = GenerationType.IDENTITY)
-  private long id;
+  private Long id;
   private String name;
   private String email;
   @OneToMany(fetch = FetchType.LAZY, mappedBy = "assignee")
@@ -22,5 +22,10 @@ public class Assignee {
 
   public Assignee() {
     this.todos = new ArrayList<>();
+  }
+
+  public Assignee(String name) {
+    this.todos = new ArrayList<>();
+    this.name = name;
   }
 }

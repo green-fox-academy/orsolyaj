@@ -9,4 +9,5 @@ public interface ITodoService {
   Todo findById(long Id);
   void save(Todo todo);
   void delete(long Id);
+  List<Todo> search(String seachTerm);
 }

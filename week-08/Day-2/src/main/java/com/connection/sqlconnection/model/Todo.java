@@ -4,6 +4,7 @@ import lombok.Getter;
 import lombok.Setter;
 
 import javax.persistence.*;
+import java.time.LocalDateTime;
 import java.util.Date;
 
 @Entity
@@ -27,9 +28,13 @@ public class Todo {
     this.title = title;
     this.urgent = false;
     this.done = false;
+    this.createdAt = new Date();
   }
 
   public Todo() {
+    this.urgent = false;
+    this.done = false;
+    this.createdAt = new Date();
   }
 
 //  public Long getId() {

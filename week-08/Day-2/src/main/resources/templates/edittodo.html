@@ -7,6 +7,9 @@
   <title>Edit</title>
 </head>
 <body>
+<header>
+  <div th:replace="headertemplate :: header" class="container clearfix" ></div>
+</header>
 <h1>Edit Todo</h1>
 <div class="form-group">
   <form th:action="|@{/todo/edit}?id=${todo.id}|" th:method="post" th:object="${todo}">

@@ -1,8 +1,8 @@
 package com.connection.sqlconnection.controller;
 
-import com.connection.sqlconnection.service.ITodoService;
+import com.connection.sqlconnection.model.Todo;
+import com.connection.sqlconnection.service.AssigneeService;
 import com.connection.sqlconnection.service.TodoService;
-import jdk.nashorn.internal.objects.annotations.Getter;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
@@ -11,15 +11,33 @@ import org.springframework.web.bind.annotation.*;
 @RequestMapping("/todo")
 public class TodoController {
   private TodoService todoService;
+  private AssigneeService assigneeService;
 
-  public TodoController(TodoService todoService) {
+  public TodoController(TodoService todoService, AssigneeService assigneeService) {
     this.todoService = todoService;
+    this.assigneeService = assigneeService;
   }
 
   @GetMapping("/list")
-  public String list(Model model) {
+  public String renderList(Model model) {
     model.addAttribute("todos", todoService.findAll());
+    model.addAttribute("assignees", assigneeService.findAll());
     return "todolist";
+  }
+
+  @GetMapping("/changeslave")
+  public String changeSlave(@RequestParam long id, @RequestParam long toid) {
+//    todoService.findById(toid).setAssignee(assigneeService.findById(id));
+//    todoService.save(todoService.findById(toid).setAssignee(assigneeService.findById(id)));
+    Todo todo = todoService.findById(toid);
+    todo.setAssignee(assigneeService.findById(id));
+    todoService.save(todo);
+    return "redirect:/todo/list";
+  }
+
+  @PostMapping("/list")
+  public String postChosenAssignee(@RequestParam long assignee_id,Todo todo) {
+return "redirect:/todo/list";
   }
 
   @GetMapping("/active")

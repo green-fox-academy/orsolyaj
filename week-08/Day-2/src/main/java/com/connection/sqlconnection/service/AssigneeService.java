@@ -25,7 +25,7 @@ public class AssigneeService implements IAssigneeService {
 
   @Override
   public Assignee findById(long Id) {
-    return null;
+    return assigneeRepository.findById(Id).orElse(null);
   }
 
   @Override

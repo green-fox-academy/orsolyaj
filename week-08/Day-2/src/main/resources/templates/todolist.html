@@ -5,14 +5,30 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <link href="/webjars/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet"/>
   <title>todo list</title>
+
+  <style>
+    .dropdown:hover
+    .dropdown-menu {
+      display: block;
+    }
+
+    .dropdown-content {
+      display: block;
+    }
+    ul {
+      list-style-type: none;
+    }
+  </style>
 </head>
 <body>
+<header>
+  <div th:replace="headertemplate :: header" class="container clearfix" ></div>
+</header>
 <h1>Todos for today:</h1>
-<!--<form th:action="|@{/todo/search}?id=${todo.id}|" th:method="post" th:object="${todo}">-->
-<!--<input type="search"  placeholder="search">-->
-<!--<button type="submit">go</button>-->
-<!--</form>-->
-<a class="btn btn-info" th:href="@{/todo/assignees}">List of assignees</a>
+<form th:action="|@{/todo/search}" th:method="post">
+<input type="search" name="searchTerm"  placeholder="search">
+<button type="submit">go</button>
+</form>
 <a class="btn btn-info" th:href="@{/todo/add}">Add task</a>
 <div class="container">
   <table>
@@ -22,21 +38,49 @@
       <th>ACTION</th>
       <th>DONE</th>
       <th>URGENT</th>
+      <th>ASSIGNEE</th>
       </thead>
     </div>
     <div class="table-row">
       <tr th:each="todo : ${todos}">
-        <div class="col-1"> <td th:text="${todo.getId()}"></td> </div>
-        <div class="col-6"><td th:text="${todo.getTitle()}"></td></div>
-        <div class="col-2"><td th:text="${todo.isDone()}"></td></div>
-        <div class="col-2"><td th:text="${todo.isUrgent()}"></td></div>
+        <div class="col-1">
+          <td th:text="${todo.getId()}"></td>
+        </div>
+        <div class="col-6">
+          <td th:text="${todo.getTitle()}"></td>
+        </div>
+        <div class="col-2">
+          <td th:text="${todo.isDone()}"></td>
+        </div>
+        <div class="col-2">
+          <td th:text="${todo.isUrgent()}"></td>
+        </div>
+        <div class="col-2">
+          <td>
+            <span th:if="${todo.getAssignee() ==null}" >no assignee</span>
+            <span th:unless="${todo.getAssignee() ==null}" th:text="${todo.getAssignee().getName()}"></span>
+          </td>
+        </div>
         <td><a class="btn btn-danger" th:href="|@{/todo/delete}?id=${todo.id}|">delete</a></td>
         <td><a class="btn btn-warning" th:href="|@{/todo/edit}?id=${todo.id}|">edit</a></td>
+        <td>
+          <li class="dropdown">
+            <a href="#" data-toggle="dropdown" class="dropdown-toggle">Dropdown <b class="caret"></b></a>
+            <ul class="dropdown-menu">
+              <li><a th:each="assignee : ${assignees}" class="dropdown-content" th:text="${assignee.name}"
+                     th:value="${assignee.id}"
+                     th:href="|@{/todo/changeslave}?id=${assignee.id}&toid=${todo.id}|"></a>
+              </li>
+            </ul>
+          </li>
+        </td>
       </tr>
     </div>
   </table>
 </div>
 </body>
 <script src="/webjars/jquery/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.9.3/umd/popper.min.js"></script>
 <script src="/webjars/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
 </html>

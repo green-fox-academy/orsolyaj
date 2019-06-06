@@ -39,6 +39,11 @@ public class TodoService implements ITodoService{
   todoRepository.deleteById(id);
   }
 
+  @Override
+  public List<Todo> search(String seachTerm) {
+    return todoRepository.findBySearchTermNative(seachTerm);
+  }
+
   public List<Todo> listActive() {
     List<Todo> todoList = new ArrayList<>();
     todoRepository.findAll().forEach(todo -> todoList.add(todo));

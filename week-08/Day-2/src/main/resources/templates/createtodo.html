@@ -7,6 +7,9 @@
   <title>create todo</title>
 </head>
 <body>
+<header>
+  <div th:replace="headertemplate :: header" class="container clearfix" ></div>
+</header>
 <h1>Add Task</h1>
 <div class="form-group">
   <form th:action="@{/todo/add}" th:method="post" th:object="${todo}">
