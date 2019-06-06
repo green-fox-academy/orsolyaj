@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>Red Index</title>
+</head>
+<body>
+<a th:href="@{/fakereddit/addpost}">Submit new post</a>
+
+<h1>Trending posts</h1>
+
+<table>
+  <tr th:each="post : ${postList}">
+    <td th:text="${post.likes}"></td>
+    <td><a th:href="|@{/fakereddit/like}?id=${post.id}|">+</a></td>
+    <td><a th:href="@{/fakereddit/dislike}">-</a></td>
+    <td ><a th:text="${post.title}" th:href="${post.source}"></a></td>
+    <td></td>
+  </tr>
+</table>
+
+</body>
+</html>

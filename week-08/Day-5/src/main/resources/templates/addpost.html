@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>add post</title>
+</head>
+<body>
+<h1>Submit a new post</h1>
+<form th:action="@{/fakereddit/addpost}" th:method="post" th:object="${post}">
+  <label for="title">Title:</label>
+  <input id="title" name="title" type="text" th:field="*{title}">
+  <label for="url">URL:</label>
+  <input id="url" name="url" type="url" th:field="*{source}">
+  <button type="submit">Submit</button>
+</form>
+</body>
+</html>
