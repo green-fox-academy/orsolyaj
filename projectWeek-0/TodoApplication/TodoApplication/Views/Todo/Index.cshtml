@@ -1,0 +1,36 @@
+﻿@model List<TodoApplication.Models.Todo>
+
+<h1>Todo List</h1>
+
+<p>view</p>
+
+<table class="table">
+    <tr>
+        <th>Task</th>
+        <th>Urgent</th>
+        <th>Done</th>
+        <th>Action</th>
+    </tr>
+    @foreach (var todo in Model)
+    {
+<tr>
+    <td>@todo.Name</td>
+    <td>@todo.Urgent</td>
+    <td>@todo.Done</td>
+    <td>
+        <form action="/Todo/Delete?id=@todo.TodoId" method="post">
+            <button type="submit">Delete</button>
+        </form>
+    </td>
+    <td>
+        <form action="/Todo/Update?id=@todo.TodoId" method="post">
+            <button type="submit">Update</button>
+        </form>
+    </td>
+</tr>
+    }
+</table>
+
+
+
+
